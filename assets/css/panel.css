@@ -1,0 +1,54 @@
+body {color: #3f3f79}
+html.lang-en,html.lang-en body {font-family: 'arial'; color: #3f3f79}
+html{scroll-behavior: smooth;}
+a{color: #6d6d6d}
+.ltr{direction: ltr;}
+header{}
+#loading{position: fixed;background: rgba(255, 255, 255, 0.5);height: 100%;width: 100%;left: 0px;right: 0px;top: 0px;bottom: 0px; text-align: center; z-index: 9999}
+#loading i{    margin: auto auto;font-size: 55px;color: #f15838;position: relative;top: calc(50% - 90px);}
+#menu{position: sticky; top: 0px; z-index: 999;}
+#menu a{}
+body.scroll #breadcrumb{position: sticky; top: 25px; z-index: 90;}
+body #breadcrumb {transition: all 0.2s linear;}
+body.scroll #breadcrumb .topbar{}
+
+
+.hint .js-typeahead-input{border-radius: 0px !important;}
+.typeahead__result{}
+
+.ltr .typeahead__cancel-button{left: auto;right: 10px;color: #dc3545; z-index: 999; top: 10px; padding: 0px;}
+.typeahead__list>li{border:0px; border-radius: 5px;}
+.typeahead__group{font-size: .875em}
+.typeahead__item {font-size: .875em}
+.typeahead__item  a{border-radius: 5px; font-size: 1em}
+.typeahead__list>.typeahead__group.active>a, .typeahead__list>.typeahead__group>a, .typeahead__list>.typeahead__group>a:focus, .typeahead__list>.typeahead__group>a:hover
+{background: #2b3386 !important ; color: #FFF !important;     font-weight: normal;}
+.shine {background: #FFF;background-image: linear-gradient(to right, #FFF 0%, #edeef1 20%, #FFF 40%, #FFF 100%);background-repeat: no-repeat;background-size: 800px 104px; display: inline-block;position: relative; -webkit-animation-duration: 2s;-webkit-animation-fill-mode: forwards; -webkit-animation-iteration-count: infinite;-webkit-animation-name: placeholderShimmer;-webkit-animation-timing-function: linear;}
+  
+
+
+.ltr .typeahead__container .typeahead__field .typeahead__hint,
+.ltr .typeahead__container .typeahead__field .typeahead__label-container,
+.ltr .typeahead__container .typeahead__field [contenteditable],
+.ltr .typeahead__container .typeahead__field input,
+.ltr .typeahead__container .typeahead__field textarea{padding-right:27px !important; padding-left:10px !important; font-size: 15px;line-height: 17px;}
+
+body:before {
+display: none;
+}
+@media (max-width: 767px) {
+  body:before {content: "XS";}
+}
+@media (min-width: 768px) and (max-width: 983px) {
+  body:before {content: "SM";}
+}
+@media (min-width: 984px) and (max-width: 1199px) {
+  body:before {content: "MD";}
+}
+@media (min-width: 1200px) {
+  body:before {content: "LG";}
+  /*body > .container{min-height: 476px;}*/
+}
+#logo{height: 75px ; line-height: 75px;}
+
+#breadcrumb{background: #f15838}
