@@ -2,6 +2,8 @@
 include_once('include/function.inc.php');
 include_once('include/function-template.inc.php');
 include_once('include/function-user.inc.php');
+include_once('include/header.inc.php');
+
 $user = new user();
 $is_login = $user->function_return_user_data("login");
 $service_name = "user";
@@ -11,7 +13,7 @@ if(array_key_exists('action',$_GET)){$action = $_GET['action'];}
 if(array_key_exists('redirect',$_GET)){$redirect = $_GET['redirect'];}
 if($is_login)
 {
-    $uid = function_return_user_data("uid");
+    $uid = $user->function_return_user_data("uid");
     if($action == "login"){header("Location: $redirect");}
 }
 else

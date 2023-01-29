@@ -33,24 +33,19 @@ $breadcrumb_array = array
   array("href"=>"#","title"=>$nav_title),
 );
 $breadcrumb = function_return_breadcrumb($service_name,$action,$breadcrumb_array);
+$header = new header();
+$header->meta_title = $page_title;
+$header->meta_author = $page_title;
+$header->meta_type = $service_name;
 ?>
 <!doctype html>
 <head>
 <?php 
-  $meta_title = $page_title;
-  $meta_author  = $page_title;
-  $meta_description = "";
-  $meta_lang = $lang;
-  $meta_keyword = "";
-  $meta_img = "";
-  $meta_type = $service_name;
-  $metatag_array= array("lang" => $meta_lang, "title" =>$meta_title, "author"=>$meta_author, "keyword" => $meta_keyword, "description" => $meta_description, "img" => $meta_img, "type" => $meta_type);
-  include_once('include/template/metatag.php');
-  include_once('include/template/header.php');
+    echo $header->metatag();
+    include_once('include/template/header.php');
 ?>
 </head>
 <body class="<?php echo $direction; ?> <?php echo $service_name; ?> <?php echo $action; ?>">
-    <?php include_once('include/template/preloader.php');?>
     <?php include_once('include/template/menu.php');?>
     <div class="container-fluid" id="breadcrumb">
         <?php echo $breadcrumb?>

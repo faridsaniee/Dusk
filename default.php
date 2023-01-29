@@ -3,6 +3,8 @@ include_once('include/function.inc.php');
 include_once('include/function-user.inc.php');
 include_once('include/function-template.inc.php');
 include_once('include/function-data.inc.php');
+include_once('include/header.inc.php');
+
 $user = new user();
 $is_login = $user->function_return_user_data("login");
 $lang = $GLOBALS['global_lang'];
